@@ -2,7 +2,7 @@
 #define LIST_H
 
 #include "sstream"
-#include "Sort.h"
+#include "../Sort/Sort.h"
 
 
 template<class T>
