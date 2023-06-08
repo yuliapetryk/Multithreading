@@ -11,8 +11,7 @@ public:
      /// @param size is the size ot this array
      /// @warning The function will not work if the list is empty
     void sort(T* array, int size) override
-    {
-        
+    { 
         T key;
         int i, j;
         for (i = 1; i < size; i++)
