@@ -12,6 +12,19 @@ public:
     virtual void sort(T* array, int size) = 0;
     
 protected:
+
+    ///The function checks whether the elements are consistent with the direction
+       /// @param array Array we want to sort
+       /// @param left  The first element 
+       /// @param right The second element 
+       /// @param dir indicates the sorting direction, ASCENDING or DESCENDING;
+    void compAndSwap(T* array, int left, int right, int dir)
+    {
+        if (dir == (array[left] > array[right]))
+            Sort<T>::swap(&array[left], &array[right]);
+
+    }
+
     /// The function swaps elements
     void swap(T* a, T* b)
     {
