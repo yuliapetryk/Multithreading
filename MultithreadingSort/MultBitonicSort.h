@@ -1,11 +1,11 @@
 #ifndef MULTBITONICSORT_H
 #define MULTBITONICSORT_H
 #include <thread>
-#include "Sort.h"
+#include "../Sort/Sort.h"
 
 template<class T>
 ///Class implements sorting by  Bitonic sort.
-class BitonicSort : public Sort<T>
+class MultBitonicSort : public Sort<T>
 {
 private:
 
@@ -38,6 +38,27 @@ private:
             bitonicSort(array, left, mid, 1);
             bitonicSort(array, left + mid, mid, 0);
             bitonicMerge(array, left, middle, dir);
+        }
+    }
+
+    void multBitonicSort(T* array, int left, int middle, int dir)
+    {
+        if (middle > 1)
+        {
+            if (left - middle < 10000) {
+                bitonicSort(array, left,  middle,  dir);
+            }
+            else {
+                int mid = middle / 2;
+
+                std::thread leftThread(&MultBitonicSort<T>::bitonicSort, this, array, left, mid, 1);
+                std::thread rightThread(&MultBitonicSort<T>::bitonicSort, this, array, left + mid, mid, 0);
+
+                leftThread.join();
+                rightThread.join();
+
+                bitonicMerge(array, left, middle, dir);
+            }
         }
     }
 public:
