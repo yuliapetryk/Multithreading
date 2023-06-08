@@ -5,6 +5,7 @@
 #include "Sort/InsertionSort.h"
 #include "MultithreadingSort/MultQuickSort.h"
 #include "MultithreadingSort/MultMergeSort.h"
+#include "MultithreadingSort/MultBitonicSort.h"
 #include "Decorator/TimeMeasure.h"
 #include "List/ArrayList.h"
 #include <iostream>
@@ -42,12 +43,16 @@ void runSort(int type, int randomDigits[], int n) {
         std::cout << "Multithreading Quick Sort->";
         break;
     case 5:
-        sort = new MergeSort<T>;
-        std::cout << "Merge Sort->";
-        break;
-    case 6:
         sort = new BitonicSort<T>;
         std::cout << "Bitonic Sort->";
+        break;
+    case 6:
+        sort = new MultBitonicSort<T>;
+        std::cout << "Multithreading Bitonic Sort->";
+        break;
+    case 7:
+        sort = new MergeSort<T>;
+        std::cout << "Merge Sort->";
         break;
     default:
         sort = new MultMergeSort<T>;
@@ -75,7 +80,7 @@ void runSort(int type, int randomDigits[], int n) {
 
      }
      
-     for (int i = 3; i <= 7; i++) {
+     for (int i = 3; i <= 8; i++) {
          runSort(i, randomDigits, n);
      }
 }
