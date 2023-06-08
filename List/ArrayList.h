@@ -1,7 +1,5 @@
-
 #ifndef ARRAYLIST_H
 #define ARRAYLIST_H
-
 
 #include "List.h"
 
@@ -64,6 +62,7 @@ public:
         }
         size++;
     }
+
     /// Gets element by index from list.
    /// @note If index is less than 0, removed last element from the list.
    /// @warning If index is bigger or equals to the size, than method must throw std::out_of_range exeption.

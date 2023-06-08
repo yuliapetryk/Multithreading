@@ -42,13 +42,11 @@ public:
     /// @return The string of this List.
     virtual std::string to_string() = 0;
 
-
     /// Override operator << of ostream.
     friend std::ostream& operator<<(std::ostream& stream, List<T>& list) {
         stream << list.to_string();
         return stream;
     };
-
 
     /// Equality operator.
     /// @param array The second array with which we compare
@@ -67,7 +65,6 @@ public:
     bool operator!=(List& array) {
         return !(array == *this);
     }
-
 
     /// Operator 'less than'
     /// @param array The second array with which we compare
