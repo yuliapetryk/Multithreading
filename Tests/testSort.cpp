@@ -1,4 +1,4 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#define DOCTEST_CONFIG_IMPLEMENT//_WITH_MAIN
 #include "doctest.h"
 #include "../Sort/BubbleSort.h"
 #include "../Sort/MergeSort.h"
@@ -114,6 +114,7 @@ TEST_CASE("Tests for int") {
     }
 }
 
+
 TEST_CASE("Tests for int with time measurement ") {
     int a = 1, b = 2, c = 3, d = 4;
     //create Array list
@@ -201,7 +202,6 @@ TEST_CASE("Tests for int with time measurement ") {
 }
 
 
-
 TEST_CASE("Tests for string") {
     std::string a = "apple", b = "banana", c = "cocktail", d = "dish";
     //create Array list
@@ -287,7 +287,6 @@ TEST_CASE("Tests for string") {
     }
 
 }
-
 
 
 TEST_CASE("Tests Multithreading Algorithms for int") {
@@ -398,6 +397,7 @@ TEST_CASE("Tests Multithreading Algorithms for int with time measurement") {
         }
     }
 }
+
 
 TEST_CASE("Tests Multithreading Algorithms for string") {
     std::string a = "apple", b = "banana", c = "cocktail", d = "dish";

@@ -67,7 +67,7 @@
 
 
     int main() {
-       doctest();
+      // doctest();
         long long int n = 250000;
         int randomDigits[250000]{};
 

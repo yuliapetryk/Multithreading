@@ -1,15 +1,45 @@
 
-Quick Sort time: 1269ms
+250000(int)
 
-Multithreading Quick sort time: 514ms
+Quick Sort time: 778ms
 
-Bitonic Sort time: 459ms
+Multithreading Quick sort time: 392ms
 
-Multithreading Bitonic Sort time: 250ms
+Bitonic Sort time: 322ms
 
-Merge Sort time: 243ms
+Multithreading Bitonic Sort time: 168ms
 
-Multithreading Merge Sort time: 533ms
+Merge Sort time: 301ms
 
-Quick Sort time: 1390ms
+Multithreading Merge Sort time: 464ms
+
+
+100000(int)
+
+Quick Sort time: 193ms
+
+Multithreading Quick sort time: 125ms
+
+Bitonic Sort time: 118ms
+
+Multithreading Bitonic Sort time: 73ms
+
+Merge Sort time: 115ms
+
+Multithreading Merge Sort time: 208ms
+
+
+30000(int)
+
+Quick Sort time: 18ms
+
+Multithreading Quick sort time: 29ms
+
+Bitonic Sort time: 49ms
+
+Multithreading Bitonic Sort time: 21ms
+
+Merge Sort time: 31ms
+
+Multithreading Merge Sort time: 50ms
 
