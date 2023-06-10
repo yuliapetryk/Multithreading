@@ -17,3 +17,5 @@ The program supports work with <em>ArrayList</em>.
  <b>A multi-threaded parallel version</b> was implemented for such sorts as BitonicSort, MergeSort, QuickSort  
 
  *In order to compare the results of the work of both versions of the algorithm, time measurement was implemented. All results are added to the file result.txt*
+
+Documentation : https://yuliapetryk.github.io/Multithreading/doc/html/
