@@ -3,6 +3,8 @@
 #include "../Sort/Sort.h"
 
 template<class T>
+
+/// The class implements the creation of auxiliary functionality
 class SortDecorator : public Sort<T>
 {
 protected:

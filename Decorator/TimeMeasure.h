@@ -6,6 +6,8 @@
 #include <fstream>
 
 template<class T>
+
+/// The class implements the measurement of the running time of the algorithm
 class TimeMeasure : public SortDecorator<T>
 {
 public:

@@ -14,10 +14,10 @@
 #include "Tests/doctest.h"
 
 //namespace lab {
-  //  int doctest() {
-   //     doctest::Context context;
-   //     return context.run();
-  //  }
+    //int doctest() {
+   //    doctest::Context context;
+   //    return context.run();
+   // }
 
 
     void runSort(int type, int randomDigits[], int n) {
@@ -67,7 +67,7 @@
 
 
     int main() {
-       // doctest();
+       doctest();
         long long int n = 250000;
         int randomDigits[250000]{};
 
