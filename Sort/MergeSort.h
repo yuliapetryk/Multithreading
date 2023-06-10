@@ -1,8 +1,8 @@
 #ifndef MERGESORT_H
 #define MERGESORT_H
 
-
 #include "../Sort/Sort.h"
+
 template<class T>
 ///Class implements sorting by Merge sort.
 class MergeSort : public Sort<T> {
@@ -22,12 +22,17 @@ private:
     }
 
 public:
+
+    ///The function returns the name of the sort type
+    std::string sortName() {
+        return "Merge Sort";
+    }
+
     /// A method for sorting arrays by Merge sort
       /// @param array is array we want to sort
       /// @param size is the size ot this array
       /// @warning The function will not work if the list is empty
     void sort(T* array, int size) override {
-       
         mergeSort(array, 0, size - 1);
     }
 };

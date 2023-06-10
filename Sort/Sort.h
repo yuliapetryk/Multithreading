@@ -1,17 +1,22 @@
 #ifndef SORT_H
 #define SORT_H
+#include <string>
 
 template <class T>
 /// Class implements Sort.
 class Sort {
 public:
-
+   
     /// Virtual method for sort arrays
     /// @param array is array we want to sort
     /// @param size is the size ot this array
     virtual void sort(T* array, int size) = 0;
-    
+
+    ///The function returns the name of the sort type
+    virtual std::string sortName() = 0;
+
 protected:
+   
 
     ///The function checks whether the elements are consistent with the direction
        /// @param array Array we want to sort
@@ -43,7 +48,7 @@ protected:
         T pivot = array[high];
         int i = (low - 1);
 
-        for (T j = low; j <= high - 1; j++) {
+        for (int j = low; j <= high - 1; j++) {
             if (array[j] < pivot) {
                 i++;
                 swap(&array[i], &array[j]);
@@ -121,7 +126,7 @@ protected:
         if (a == b) return 0;
         else return a > b;
     }
-
+    
 };
 
 #endif

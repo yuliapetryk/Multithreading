@@ -1,8 +1,9 @@
-#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#define DOCTEST_CONFIG_IMPLEMENT//_WITH_MAIN
 #include "doctest.h"
 #include "../Sort/BubbleSort.h"
 #include "../Sort/MergeSort.h"
 #include "../Sort/BitonicSort.h"
+#include "../Decorator/TimeMeasure.h"
 #include "../MultithreadingSort/MultBitonicSort.h"
 #include "../MultithreadingSort/MultMergeSort.h"
 #include "../MultithreadingSort/MultQuickSort.h"
@@ -29,8 +30,6 @@ std::string to_list_string(T* a,
     ss << ']';
     return ss.str();
 }
-
-
 
 
 TEST_CASE("Tests for int") {
@@ -68,6 +67,22 @@ TEST_CASE("Tests for int") {
         for (int i = 0; i < 3; i++) {
             CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &d));
         } 
+    }
+
+    array_list->clear();
+    array_list->add(c);
+    array_list->add(b);
+    array_list->add(a);
+    array_list->add(d);
+    //testing Merge Sort
+    SUBCASE("Testing Merge Sort with time measurement") {
+        Sort<int>* sort_merge;
+        sort_merge = new MergeSort<int>;
+        Sort<int>* timingSort = new TimeMeasure<int>(sort_merge);
+        array_list->sort(timingSort);
+        for (int i = 0; i < 3; i++) {
+            CHECK(array_list->to_string() == to_list_string(&a, &b, &c, &d));
+        }
     }
 
 

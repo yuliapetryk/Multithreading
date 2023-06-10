@@ -1,5 +1,6 @@
 #ifndef MULTQUICKSORT_H
 #define MULTQUICKSORT_H
+
 #include <thread>
 #include <algorithm>
 #include "../Sort/Sort.h"
@@ -25,8 +26,6 @@ private:
 
                 leftThread.join();
                 rightThread.join();
-
-                
             }
         }
     }
@@ -45,12 +44,17 @@ private:
     }
 
 public:
+
+    ///The function returns the name of the sort type
+    std::string sortName() {
+        return "Multithreading Quick sort";
+    }
+
     /// A method for sorting arrays by Quick sort
      /// @param array is array we want to sort
      /// @param size is the size ot this array
      /// @warning The function will not work if the list is empty
     void sort(T* array, int size) override {
-
         multQuickSort(array, 0, size - 1);
     }
 };

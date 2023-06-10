@@ -1,0 +1,15 @@
+
+Quick Sort time: 1269ms
+
+Multithreading Quick sort time: 514ms
+
+Bitonic Sort time: 459ms
+
+Multithreading Bitonic Sort time: 250ms
+
+Merge Sort time: 243ms
+
+Multithreading Merge Sort time: 533ms
+
+Quick Sort time: 1390ms
+

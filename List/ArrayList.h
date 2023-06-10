@@ -25,7 +25,6 @@ private:
         array_size = new_size;
     }
 
-
 public:
     ///Destructor of ArrayList. 
     /// 

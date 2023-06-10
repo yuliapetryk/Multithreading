@@ -3,10 +3,9 @@
 
 #include <thread>
 #include "../Sort/Sort.h"
-#include <iostream>
 
 template<class T>
-///Class implements sorting by  Bitonic sort.
+///Class implements sorting by Multithreading Bitonic sort.
 class MultBitonicSort : public Sort<T>
 {
 private:
@@ -71,11 +70,17 @@ private:
         }
     }
 public:
+
+    ///The function returns the name of the sort type
+    std::string sortName() {
+        return "Multithreading Bitonic Sort";
+    }
+
     /// A method for sorting arrays by Bitonic sort
       /// @param array is array we want to sort
       /// @param size is the size ot this array
     void sort(T* array, int size) override {
-        multBitonicSort(array, 0, size - 1, 1);
+        multBitonicSort(array, 0, size , 1);
     }
 
 };

@@ -1,11 +1,18 @@
 #ifndef INSERTIONSORT_H
 #define INSERTIONSORT_H
+
 #include "Sort.h"
 
 template<class T>
 ///Class implements sorting by Insertion sort.
 class InsertionSort : public Sort<T> {
 public:
+
+    ///The function returns the name of the sort type
+    std::string sortName() {
+        return "Insertion Sort";
+    }
+
     /// A method for sorting arrays by Insertion sort
      /// @param array is array we want to sort
      /// @param size is the size ot this array

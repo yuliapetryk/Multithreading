@@ -4,6 +4,7 @@
 #include <algorithm>
 #include "Sort.h"
 
+
 template<class T>
 ///Class implements sorting by Quick sort.
 class QuickSort : public Sort<T> {
@@ -23,12 +24,17 @@ private:
     }
 
 public:
+
+    ///The function returns the name of the sort type
+    std::string sortName() {
+        return "Quick Sort";
+    }
+
     /// A method for sorting arrays by Quick sort
      /// @param array is array we want to sort
      /// @param size is the size ot this array
      /// @warning The function will not work if the list is empty
     void sort(T* array, int size) override {
-
         quickSort(array, 0, size - 1);
     }
 };

@@ -1,7 +1,6 @@
 #ifndef BITONICSORT_H
 #define BITONICSORT_H
 
-#include <thread>
 #include "Sort.h"
 
 template<class T>
@@ -21,7 +20,7 @@ private:
         {
             int mid = number / 2;
             for (int i = left; i < left + mid ; i++)
-                Sort<T>::compAndSwap(array, i, i + mid, dir);
+                 Sort<T>::compAndSwap(array, i, i + mid, dir);
             bitonicMerge(array, left, mid, dir);
             bitonicMerge(array, left + mid, mid, dir);
         }
@@ -37,18 +36,23 @@ private:
         if (number > 1)
         {
             int mid= number / 2;
-
             bitonicSort(array, left, mid, 1);
             bitonicSort(array, left + mid, mid, 0);
             bitonicMerge(array, left, number, dir);
         }
     }
 public:
+
+    ///The function returns the name of the sort type
+    std::string sortName() {
+        return "Bitonic Sort";
+    } 
+
     /// A method for sorting arrays by Bitonic sort
       /// @param array is array we want to sort
       /// @param size is the size ot this array
     void sort(T* array, int size) override {
-        bitonicSort(array, 0, size-1, 1);
+        bitonicSort(array, 0, size, 1);
     }
 
 };
